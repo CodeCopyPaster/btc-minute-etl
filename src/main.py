@@ -1,6 +1,7 @@
 from extract import extract_data
 from transform import transform_data
 from load import load_data
+from analytics import graph
 
 def main():
     print("Starting ETL pipeline\n")
@@ -20,6 +21,9 @@ def main():
         print("\nETL pipeline completed successfully!")
     else:
         print("\nETL pipeline failed during loading.")
+
+    graph(df_transformed)
+    
 
 if __name__ == "__main__":
     main()
